@@ -1,0 +1,1 @@
+$ANT_HOME/bin/ant -f deployScript.xml -Durl=$1

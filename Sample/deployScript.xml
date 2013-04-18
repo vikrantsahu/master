@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project basedir="." default="update-app-config" name="Sample">
+<property name="url" value=""/>
+   <target name="update-app-config">
+		<unzip src="${ant.project.name}.war" dest="." overwrite="true" />
+		<replaceregexp 
+		    file="WEB-INF/classes/dbconfig.properties"
+		    match="localhost"
+		    replace="${url}"
+		    flags="g"
+		/>
+			<war destfile="${ant.project.name}.war" webxml="WEB-INF/web.xml">
+					<webinf dir="WEB-INF"/>
+					<!--webinf tag has already taken all the files required no explicit lib tag call is required-->
+					<!--lib dir="WebContent/WEB-INF/lib" includes="**"/--> 
+					<fileset dir="." includes="Welcome.html"/>
+					
+		</war>
+	</target>
+</project>
