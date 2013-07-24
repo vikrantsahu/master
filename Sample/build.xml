@@ -65,6 +65,7 @@
 				<!--lib dir="WebContent/WEB-INF/lib" includes="**"/--> 
 				
 				<fileset dir="WebContent" includes="Welcome.html"/>
+				<fileset dir="WebContent" includes="Welcome1.html"/>
 			</war>
 		</target>
 </project>
