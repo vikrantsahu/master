@@ -48,7 +48,7 @@ public class TestDBServlet extends HttpServlet {
 		response.setContentType("text/html");
 
 		   PrintWriter out = response.getWriter();
-		   out.println("<HTML><HEAD><TITLE>Welcome1 is .  "+dbHost+"</TITLE>");
+		   out.println("<HTML><HEAD><TITLE>Welcome is .  "+dbHost+"</TITLE>");
 
 		   out.println("</HEAD>");
 		   out.println("<h1>Employee details</h1>");
